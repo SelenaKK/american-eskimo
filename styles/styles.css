@@ -8,17 +8,20 @@
 
 body {
     place-content: center;
+    background-color: #ffffff;
+    background-image: url("https://cdn.pixabay.com/photo/2021/04/04/23/14/background-6151744_1280.png");
+    background-position:center;
 }
 p {
     font-size: 2em;
     font-family: 'Abhaya Libre', serif;
-    max-width: 80%;
+    width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
 /*nav bar*/
 nav{
-    background-color: #5271ff;
+    background-color: #7a6eec;
 }
 
 li{
@@ -32,11 +35,16 @@ li{
 }
 
 .navbar{
-    min-height: 70px;
+    height: 50px;
     display:flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 24px;
+    position: fixed;
+    left: 0; 
+    top: 0; 
+    width: 100%;
+    z-index: 100000;
 }
 
 .navbar:first-child{
@@ -66,7 +74,7 @@ li{
 
 .navlink:hover{
  background-color: #ffffff;
- color: #5271ff;
+ color:#7a6eec;
 }
 
 /*header*/
@@ -74,25 +82,37 @@ li{
 h1{
     font-family: 'Chewy', cursive;
     font-size: 80px;
-    color: #0E31BF;
+    color: #7a6eec;
     text-align: center;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 3px 6px 1px yellow;
+    text-shadow: 3px 6px 1px #ffffff;
     text-transform: uppercase;
 }
 
 
-@media screen and (min-width: 480px) { 
-header>img{
- display: relative;
- width:100vh;
- height: auto;
+
+/*header img{
+width: 700px;
+height: auto;
+ border-radius: 13px;
+}*/
+@media screen and (min-width: 480px){
+.AE{
+  width: 50%;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 
+
+
+/*downarrow*/
 .downarrow{
-    color:#0E31BF;
+    color:#7a6eec;
     text-align: center;
     animation: fadeIn 2s;
     animation-iteration-count: infinite;
@@ -102,24 +122,22 @@ header>img{
   100% { opacity: 1; }
 }
 
-}
-@media screen and (min-width: 480px) { 
-img{
-    display: block;
+@media screen and (min-width: 480px){
+.paw > img{
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 5%; 
 }
 }
 
-
 h2{
     font-family: 'Chewy', cursive;
     font-size: 40px;
     text-align: center;
     text-transform: uppercase;
-    color: #0E31BF;
-    text-shadow: 3px 6px 1px yellow;
+    color: #7a6eec;
+    text-shadow: 3px 6px 1px #ffffff;
     margin: 100px;
 }
 header>p{
@@ -130,7 +148,7 @@ header>p{
     text-align: center;
     
 }
-/*scroller*/
+/*scroller
 @media screen and (min-width: 480px){
 #scroller{
   display: flex;
@@ -148,17 +166,17 @@ header>p{
 #scroller a {
   width: 25px;
   height: 25px;
-  border-radius: 30px;
+  border-radius: 3px;
   margin: 10px;
-  border: 2px solid #5271ff;
+  border: 2px solid #7a6eec;
 }
 
 .active {
-  background: #5271ff;
+  background: #7a6eec;
  
 }
 
-
+*/
 
 /*section 1*/
 .about{
@@ -168,9 +186,10 @@ header>p{
   margin-left: auto;
   margin-right: auto;
   max-width: 80%;
+  
 }
 
-@media screen and (min-width: 480px) { 
+@media screen and (min-width: 480px){
 .about figure img {
     display:fixed;
     width: 500px;
@@ -187,19 +206,12 @@ header>p{
     0% {opacity: 0;}
     100% { opacity: 1; }
   }
-  }
-
-
-
+}
 .text>p{
     font-size: 25px;
     line-height: 1.2;
     padding-left: 20px
 }
-
-
-
-
 
 /*readmore btn*/
 
@@ -210,9 +222,10 @@ header>p{
 .explore-more-btn{
     padding: 15px 60px;
     font-family: 'Poppins', sans-serif;
-    background-color: black;
+    background-color: #7a6eec;
     color: #ffffff;
     border: none;
+    border-radius: 13px;
     outline: none;
     font-size: 15px;
     cursor: pointer;
@@ -222,6 +235,13 @@ header>p{
       display: flow-root;
       position: relative;
       text-align: center;
+}
+
+.explore-more-btn:active{
+  outline: none;
+  background-color: #8c52ff;
+  box-shadow: 3px 4px 5px #ffffff;
+  transform: translateY(4px);
 }
 .text.show-more .readmore{
     display: inline;
@@ -233,9 +253,6 @@ header>p{
 
 
 /* section 2 history*/
-
-
-
 /*timeline*/
 .timeline {
     position: relative;
@@ -248,7 +265,7 @@ header>p{
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #0E31BF;
+    background-color: #7a6eec;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -269,8 +286,8 @@ header>p{
     width: 25px;
     height: 25px;
     right: -15px;
-    background-color: yellow;
-    border: 4px solid #0E31BF;
+    background-color: lightblue;
+    border: 4px solid #7a6eec;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -295,9 +312,9 @@ header>p{
     width: 0;
     z-index: 1;
     right: 30px;
-    border: medium solid yellow;
+    border: medium solid lightblue;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent yellow;
+    border-color: transparent transparent transparent lightblue;
   }
   
   /* Add arrows to the right container (pointing left) */
@@ -311,7 +328,7 @@ header>p{
     left: 30px;
     border: medium solid;
     border-width: 10px 10px 10px 0;
-    border-color: transparent yellow transparent transparent;
+    border-color: transparent lightblue transparent transparent;
   }
   
   /* Fix the circle for containers on the right side */
@@ -322,7 +339,7 @@ header>p{
   /* The actual content */
   .content {
     padding: 20px 30px;
-    background-color: yellow;
+    background-color: lightblue;
     position: relative;
     border-radius: 6px;
     font-size: 10px;
@@ -333,7 +350,8 @@ header>p{
     text-transform: uppercase;
     font-size:23px;
     text-align: center;
-    color: #0E31BF;
+    color: #7a6eec;
+    text-shadow: 3px 6px 1px #ffffff;
   }
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -353,9 +371,9 @@ header>p{
   /* Make sure that all arrows are pointing leftwards */
     .container::before {
       left: 60px;
-      border: medium solid yellow;
+      border: medium solid lightblue;
       border-width: 10px 10px 10px 0;
-      border-color: transparent yellow transparent transparent;
+      border-color: transparent lightblue transparent transparent;
     }
   
   /* Make sure all circles are at the same spot */
@@ -384,9 +402,9 @@ header>p{
   .click{
     text-align: center;
     font-size: 20px;
-    color: #0E31BF;
+    color: #7a6eec;
     font-weight: bold;
-    text-transform: uppercase;
+    text-shadow: 5px 4px 5px #ffffff;
   }
 
 /*star rating*/
@@ -394,20 +412,21 @@ header>p{
   display: block;
   font-size:10px;
   text-align: center; 
+  color: #7a6eec;
   }
 
   .checked{
-    color: orangered;
+    color: lightpink;
   }
   
   .items>button{
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
-    color: #0E31BF;
+    color: #7a6eec;
     font-weight: bold;
     padding: 0.75rem;
-    background-color: yellow;
-    box-shadow: 0.5rem 0.5rem #0E31BF;
+    background-color: #ffffff;
+    box-shadow: 0.5rem 0.5rem #7a6eec;
     border: none;
     outline: none;
     cursor: pointer;
@@ -437,7 +456,7 @@ header>p{
   font-size: 13px;
 }
 
-
+/*care*/
 
 .best{
   text-transform: uppercase;
@@ -464,11 +483,11 @@ section>.containers{
 .tip>h3{
   font-size: 20px;
       font-family: 'Poppins', sans-serif;
-      color: #0E31BF;
+      color: #7a6eec;
       font-weight: bold;
       padding: 0.75rem; 
-      background-color: yellow;
-      box-shadow: 0.5rem 0.5rem #0E31BF;
+      background-color: #ffffff;
+      box-shadow: 0.5rem 0.5rem #7a6eec;
 }
 .tip>p{
   margin-top: 10px;
@@ -477,14 +496,88 @@ section>.containers{
 
 .tip:last-child{
   background-color: lightpink;
+  border-radius: 15px;
 }
 .tip:first-child{
   background-color: lightpink;
+  border-radius: 15px;
 }
 .tip:nth-child(2){
   background-color: lightblue;
+  border-radius: 15px;
 }
 .tip:nth-child(3){
   background-color: lightblue;
+  border-radius: 15px;
 }
 
+/*quiz section*/
+
+
+.quiz{
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+} 
+@media screen and (min-width: 480px){
+ .eskie-img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 13px;
+ } 
+}
+  /*display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width:80%;
+  **/
+
+
+/*@media screen and (min-width: 480px) { 
+.quiz_img{
+  width: 100px;
+  height: auto;
+}
+}
+*/
+
+
+
+.quiz_content button{
+  padding: 15px 60px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #7a6eec;
+    border: none;
+    border-radius: 13px;;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+      display: flow-root;
+      position: relative;
+      text-align: center;
+}
+
+.quiz_content button a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.quiz_content button:active{
+  outline: none;
+  background-color: #8c52ff;
+  box-shadow: 3px 4px 5px #ffffff;
+  transform: translateY(4px);
+
+}
+
+.quiz h2{
+  text-transform: lowercase;
+}

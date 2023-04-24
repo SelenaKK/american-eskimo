@@ -17,13 +17,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/quiz.css"/>
     <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
     <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
     <script src="scripts/scripts.js" defer></script>
+    <script src="scripts/quizscript.js" defer></script>
   </head>
   <body>
     <!-- YOUR HTML GOES HERE -->
-
     <nav class="navbar">
        <a href="#" class="navbranding">eskies</a>
        <ul class="navmenu">
@@ -39,24 +40,25 @@
      <header>
       <h1>hello, </h1>
       <h1>welcome to American Eskimo family </h1>
-      <img src="https://cdn.pixabay.com/photo/2019/03/29/14/04/dog-4089277_1280.jpg" alt="eskie is happily running">
-     
-        <h2> about our website </h2>
-        <p>our website is dedicated to providing you with everything you need to know about this wonderful breed, including its history, characteristics, care requirements, and more.</p>
-     
+      <img class="AE" src="https://images.unsplash.com/photo-1590209354901-93ec5731b9ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1737&q=80" alt="eskie is sleeping well">  
+      <h2> about our website </h2>
+      <p>our website is dedicated to providing you with everything you need to know about this wonderful breed, including its history, characteristics, care requirements, and more.</p>  
     </header>
+
     <main>
-      <!--scroller!-->
+      <!--scroller!
       <div id="scroller">
         <a id="srcoller1" href="#about" class="active"></a>
         <a id="srcoller2" href="#history" class="active"></a>
         <a id="srcoller3" href="#characteristics" class="active"></a>
         <a id="srcoller4" href="#care" class="active"></a>
         <a id="srcoller5" href="#quiz" class="active"></a>
-      </div>
+      </div>-->
       <article>
         <section>
+          <div class="paw">
           <img src="https://cdn.pixabay.com/photo/2022/06/25/18/59/dogs-7284056_1280.png" alt="dog paw cartoon">
+        </div>
           <div class="sectionone">
           <h2><a id="about">about American Eskimo</a></h2>
           <div class="about">
@@ -65,7 +67,7 @@
             <p>Its name, this breed has no connection to the Eskimo culture or way of life.</p>
             <p>The American Eskimo Dogs, also known as the Eskie, come in three sizes—standard, miniature, and toy. They have double coats which are dense and white. And their coats are used to keeping out the cold. </p>
             <p>They have Nordic type  <span class="dots">...</span><span class="readmore"> with erect triangular shaped ears, and they have distinctive black points on their faces such as their lips, noses, and eye rims. They also have plumed tails carried over the back. American Eskimo Dogs are highly intelligent, playful, and affectionate. Eskies are very social and thrive on human companionship. They make excellent family pets and are good with children, as long as they are properly socialized and trained from a young age.</span></p>
-            <button class="explore-more-btn">Explore More</button>
+            <button class="explore-more-btn">explore more</button>
             </div>
             <figure>
               <img src="https://cdn.pixabay.com/photo/2022/12/12/12/58/dog-7651002_1280.jpg" alt="eskie is sitting on the grass">
@@ -232,6 +234,16 @@
             </div>
             </div>
             </section>
+            <footer>
+              <div class="quiz"> 
+                <img class="eskie-img" src="https://images.unsplash.com/photo-1565722386146-c3e6d43e7e11?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" alt="cute eskies">
+                <div class="quiz_content">
+              <h2><a id="quiz">If you are thinking about adding an American Eskimo to your life, why not</a></h2>
+              <button><a href=quiz.html>take a quiz</a></button>
+              <h2>to see if the breed is the perfect fit for you?</h2>
+            </div>
+            </div>
+            </footer>
      </article>   
      </main>
      
