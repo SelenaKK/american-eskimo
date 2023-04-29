@@ -6,14 +6,17 @@ const text = document.querySelector('.text');
 
 exploreBtn.addEventListener('click', (e)=>{
     text.classList.toggle('show-more');
-    if (exploreBtn.innerText === 'Explore More'){
-        exploreBtn.innerText ='Explore Less';
-    } else{
+    if (exploreBtn.innerText === 'Explore Less'){
         exploreBtn.innerText ='Explore More';
+    } else{
+        exploreBtn.innerText ='Explore Less';
     }
 })
 
-/*star rating*/
+
+
+
+/*star rating reference: https://www.youtube.com/watch?v=UCdaOBWOh2c*/
 
 function hideUnhide(id){
     const s1 = document.getElementById(id);
@@ -23,5 +26,4 @@ function hideUnhide(id){
         s1.style.display = "block";
     }
 }
-
 

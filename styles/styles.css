@@ -10,20 +10,19 @@ html{
   scroll-behavior: smooth;
 }
 
-@media screen and (min-width: 300px){
+
 body {
     place-content: center;
-    background-color: #ffffff;
+    background-color: transparent;
     background-image: url("https://cdn.pixabay.com/photo/2021/04/04/23/14/background-6151744_1280.png");
     background-position: center;
     background-attachment: fixed;
-    line-height: 1.5;
-    min-width: 100%;
-    
-}
+    line-height: 1.5; 
+    width:100%; 
 }
 
-@media screen and (min-width: 300px){
+
+
 p {
     font-size: 2em;
     font-family: 'Abhaya Libre', serif;
@@ -31,9 +30,9 @@ p {
 	margin-left: auto;
 	margin-right: auto;
 }
-}
+
 /*nav bar*/
-@media screen and (min-width: 300px){
+
 nav{
     background-color: #7a6eec;
 }
@@ -63,6 +62,7 @@ li{
 
 .navbar:first-child{
     text-transform: uppercase;
+    gap: 60px;
 }
 
 .navbar a{
@@ -71,28 +71,40 @@ li{
     font-family: 'Poppins', sans-serif;
 }
 
+.navbar a:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
 .navmenu{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     gap: 60px;
 }
 
+
 .navbranding{
  font-size: 1.25rem;
+ display: flex;
+ align-items: center;
 }
 
-.navlink{
-    transition: 0.7s ease;
+ul li:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
-.navlink:hover{
- background-color: #ffffff;
- color:#7a6eec;
-}
+/*reference:https://www.youtube.com/watch?v=flItyHiDm7E*/
+.hamburger{
+  display: none;
+  cursor: pointer;
+
 }
 
-@media screen and (min-width: 300px){
+
+
+
 h1{
     font-family: 'Chewy', cursive;
     font-size: 80px;
@@ -104,42 +116,33 @@ h1{
     text-shadow: 3px 6px 1px #ffffff;
     text-transform: uppercase;
 }
-}
 
-@media screen and (min-width: 300px){
+
+
+
+
 header img{
-width: 700px;
-height: auto;
  border-radius: 13px;
+ width: 50%;
+ height: 100%;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
-
-
-.AE{
-  width: 50%;
-  height: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 13px;
-}
-}
-
-
-@media screen and (min-width: 300px){
 /*downarrow*/
 .downarrow{
-    color:#7a6eec;
-    text-align: center;
-    animation: fadeIn 2s;
-    animation-iteration-count: infinite;
+  color:#7a6eec;
+  text-align: center;
+  animation: fadeIn 2s;
+  animation-iteration-count: infinite;
 }
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  100% { opacity: 1; }
-}
+0% {opacity: 0;}
+100% { opacity: 1; }
 }
 
-@media screen and (min-width: 300px){
+
+
 
   .paw{
     display: flex;
@@ -153,9 +156,9 @@ height: auto;
  margin-left: 40px;
  margin-right: 40px;
 }
-}
 
-@media screen and (min-width: 300px){
+
+
 h2{
     font-family: 'Chewy', cursive;
     font-size: 40px;
@@ -173,60 +176,23 @@ header>p{
     text-align: center;
     
 }
-}
-/*scroller
-@media screen and (min-width: 480px){
-#scroller{
-  display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
-    position:fixed;
-    left: 0px;
-    padding-left: 1px;
-    bottom: 0px;
-}
-}
-
-#scroller a {
-  width: 25px;
-  height: 25px;
-  border-radius: 3px;
-  margin: 10px;
-  border: 2px solid #7a6eec;
-}
-
-.active {
-  background: #7a6eec;
- 
-}
-
-*/
 
 /*section 1*/
 
-@media screen and (min-width: 300px){
+
 .about{
     display: flex;
-    align-items: center;
-  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   max-width: 80%;
   
 }
-}
 
-@media screen and (min-width: 300px){
+
 .about figure img {
-    display:fixed;
+   
     width: 500px;
     height:auto;
-    margin-left: 1em;
-	margin-right: 0;
-	margin-bottom:1em;
-	margin-top:1em;
   border-radius: 13px;
     animation: fadeIn 10s;
     animation-iteration-count: 3;
@@ -236,15 +202,16 @@ header>p{
     0% {opacity: 0;}
     100% { opacity: 1; }
   }
-}
+
+
 .text>p{
     font-size: 25px;
     line-height: 1.2;
-    padding-left: 20px
+    padding-left: 20px;
 }
 
-/*readmore btn*/
-@media screen and (min-width: 300px){
+/*readmore btn reference:https://www.youtube.com/watch?v=UCdaOBWOh2c*/
+
 .readmore{
     display: none;
 }
@@ -280,34 +247,23 @@ header>p{
 .text.show-more .dots{
     display: none;
 }
-}
+
 
 /* section 2 history*/
-/*timeline*/
+/*timeline reference:https://www.w3schools.com/howto/howto_css_timeline.asp*/
 .timeline {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
   }
   
-  /* The actual timeline (the vertical ruler) */
-  .timeline::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: #7a6eec;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    right:50%;
-  }
-  
-  /* Container around content */
+ 
   .container {
     padding: 10px 40px;
     position: relative;
     width: 50%;
   }
+
   
   /* The circles on the timeline */
   .container::after {
@@ -323,15 +279,34 @@ header>p{
     z-index: 1;
   }
   
-  /* Place the container to the left */
-  .left {
-    left: 0;
-  }
+      /* Place the container to the left */
+      .left {
+        left: 0;
+      }
+      
+      /* Place the container to the right */
+      .right {
+        left: 50.5%;
+      }
+    /* Container around content */
+    .container {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+    }
   
-  /* Place the container to the right */
-  .right {
-    left: 50.5%;
-  }
+       /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #7a6eec;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      right:50%;
+    }
+
   
   /* Add arrows to the left container (pointing right) */
   .left::before {
@@ -384,48 +359,15 @@ header>p{
     text-shadow: 3px 2px 1px #ffffff;
   }
   
-  /* Media queries - Responsive timeline */
-  @media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-    .timeline::after {
-      left: 31px;
-    }
   
-  /* Full-width containers */
-    .container {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
-    }
-  
-  /* Make sure that all arrows are pointing leftwards */
-    .container::before {
-      left: 60px;
-      border: medium solid lightblue;
-      border-width: 10px 10px 10px 0;
-      border-color: transparent lightblue transparent transparent;
-    }
-  
-  /* Make sure all circles are at the same spot */
-    .left::after, .right::after {
-      left: 15px;
-    }
-  
-  /* Make all right containers behave like the left ones */
-    .right {
-      left: 0%;
-    }
-  }
 
   /*section 3 traits&characteristics*/
   
-  @media screen and (min-width: 300px){
+  
   .characteristics{
     display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
     justify-content: space-between;
-    padding: 0 200px;
+    padding:0 200px;
     gap: 20px;
   }
 
@@ -436,12 +378,11 @@ header>p{
     font-weight: bold;
     text-shadow: 5px 4px 5px #ffffff;
   }
-  }
-/*star rating*/
-@media screen and (min-width: 300px){
+  
+/*star rating reference: https://www.w3schools.com/howto/howto_css_star_rating.asp*/
+
   .items{
   display: block;
-  font-size:10px;
   text-align: center; 
   color: #7a6eec;
   }
@@ -469,8 +410,8 @@ header>p{
       position: relative;
       text-align: center;
 }
-}
-@media screen and (min-width: 300px){
+
+
 #physical{
   display: none;
   font-size: 13px;
@@ -487,21 +428,23 @@ header>p{
   display: none;
   font-size: 13px;
 }
-}
+
+
 /*care*/
-@media screen and (min-width: 300px){
+
 .best{
   text-transform: uppercase;
   font-size: 55px;
 }
-}
-@media screen and (min-width: 300px){
+
+
 section>.containers{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  width:90%;
+  width: 80%;
   margin: auto;
+  
 }
 
 .tip>h3{
@@ -543,45 +486,30 @@ section>.containers{
   background-color: lightblue;
   border-radius: 15px;
 }
-}
+
 /*quiz section*/
 
-@media screen and (min-width: 300px){
+
 .quiz{
   display: grid;
   align-items: center; 
   grid-template-columns: 1fr 1fr;
   margin-left: auto;
   margin-right: auto;
-  max-width: 80%;
+  width: 80%;
 } 
-@media screen and (min-width: 300px){
+
  .eskie-img{
-  width: 100%;
+  width: 80%;
   height: auto;
   border-radius: 13px;
  } 
-}
-}
-  /*display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width:80%;
-  **/
 
 
-/*@media screen and (min-width: 480px) { 
-.quiz_img{
-  width: 100px;
-  height: auto;
-}
-}
-*/
 
 
-@media screen and (min-width: 300px){
+
+
 .quiz_content button{
   padding: 15px 60px;
     font-family: 'Poppins', sans-serif;
@@ -611,41 +539,416 @@ section>.containers{
   transform: translateY(4px);
 
 }
-}
-@media screen and (min-width: 300px){
+
+
 .quiz h2{
   text-transform: lowercase;
+  font-size: 30px;
 }
+
+.source>p{
+  font-size: 20px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.source a{
+  text-decoration: none;
+  color: #8c52ff;
+}
+
+.source a:hover{
+  background-color: #7a6eec;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 5px;
 }
 
 
-/*.section_aa{
-  background-image: url("https://cdn.pixabay.com/photo/2021/03/31/16/35/clouds-6139980_1280.png");
+
+
+
+@media screen and (max-width: 700px){
+  /*body*/
+body{
+  place-content: center;
+  background-color: #ffffff;
+  background-image: url("https://cdn.pixabay.com/photo/2021/04/04/23/14/background-6151744_1280.png");
   background-position: center;
   background-attachment: fixed;
+  line-height: 1.5;
+  width: 100%;
+}
 
+h1{
+  font-family: 'Chewy', cursive;
+  font-size: 25px;
+  color: #7a6eec;
+  text-align: center;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-shadow: 3px 6px 1px #ffffff;
+  text-transform: uppercase;
+}
+/*header part*/
+header img{
+  border-radius: 13px;
+  width: 80%;
+  height: 100%;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ }
+
+ header>p{
+  font-size: 15px;
+  max-width: 80%;
+margin-left: auto;
+margin-right: auto;
+margin-top: -30px;
+  text-align: center;
+  
+}
+
+
+
+.paw > img{
+  display:flex;
+  width: 5%; 
+ margin-left: 12px;
+ margin-right: 10px;
+}
+
+h2{
+  font-family: 'Chewy', cursive;
+  font-size: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #7a6eec;
+  text-shadow: 3px 6px 1px #ffffff;
+  margin: 60px;
+}
+
+
+
+.text>p{
+  font-size: 15px;
+  width: 300px;
+  margin-left: 40px;
+}
+
+.explore-more-btn{
+  padding: 9px 8px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #7a6eec;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  font-size: 10px;
+  cursor: pointer;
+  max-width:700px;
+  display: flow-root;
+  position: relative;
+  
+}
+.about {
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  flex-direction: column-reverse;
+}
+
+.about figure img {
+  width: 310px;
+  height: auto;
+  margin-left: auto;
+  margin-top: -50px;
+  border-radius: 13px;
+  animation: fadeIn 10s;
+  animation-iteration-count: 3;
+}
+
+/*timeline*/
+.content h3 {
+  font-family: 'Chewy', cursive;
+  text-transform: uppercase;
+  font-size: 17px;
+  text-align: center;
+  color: #7a6eec;
+  text-shadow: 3px 2px 1px #ffffff;
+}
+
+.container {
+  padding: 10px 4px;
+  position: relative;
+  width: 50%;
+}
+
+.content>p{
+  font-size: 10px;
+  font-family: 'Abhaya Libre', serif;
+  width: 80%;
+  padding: 4px;
+}
+
+.right {
+  left: 51.5%;
+}
+
+.content {
+  padding: 7px 12px;
+  background-color: lightblue;
+  position: relative;
+  border-radius: 15px;
+  }
+
+  .click {
+    text-align: center;
+    font-size: 10px;
+    color: #7a6eec;
+    font-weight: bold;
+    text-shadow: 5px 4px 5px #ffffff;
+    margin-top: -40px;
+  }
+
+  .downarrow {
+    color: #7a6eec;
+    text-align: center;
+    animation: fadeIn 2s;
+    animation-iteration-count: infinite;
+    font-size: 10px;
+    margin-top: -10px;
+  }
+
+  .characteristics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-left: auto;
+}
+
+.items>button{
+  font-size: 9px;
+  padding: 0.55rem 0.55rem;
+}
+
+#physical>p{
+  font-size: 10px;
+}
+#social>p{
+  font-size: 10px;
+}
+#personality>p{
+  font-size: 10px;
+}
+#family>p{
+  font-size: 10px;
+}
+
+.section_c >h2{
+  margin-top: -50px;
+}
+
+.best {
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+section>.containers {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 0 10px;
+}
+
+.tip {
+  font-size: 5px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 3px;
+}
+
+.tip>h3 {
+  text-align: center;
+  font-size: 9px;
+  font-family: 'Poppins', sans-serif;
+  color: #7a6eec;
+  font-weight: bold;
+  padding: 0.55rem;
+  background-color: #ffffff;
+  box-shadow: 0.5rem 0.5rem #7a6eec;
+  width: 90px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quiz {
+  display: flex;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  width: 93%;
+  flex-direction: column;
+}
+
+.quiz h2 {
+  text-transform: lowercase;
+  font-size: 21px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.quiz_content button {
+  padding: 9px 8px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #7a6eec;
+  border: none;
+  border-radius: 7px;
+  outline: none;
+  font-size: 10px;
+  cursor: pointer;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flow-root;
+  position: relative;
+  text-align: center;
+}
+
+
+  
+
+/*nav*/
+.navbranding{
+  display: none;
+}
+.hamburger{
+  cursor: pointer;
+  display: block;
+  width:100px;
+}
+
+.bar{
+  display: block;
+  width: 29px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 6px auto;
+  transition: 0.4s;
+}
+
+
+
+.hamburger.active .bar:nth-child(2){
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1){
+  transform:translateY(8px), rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+  transform:translateY(-8px), rotate(-45deg);
+}
+.navmenu{
+  position: fixed;
+  left: -100%;
+  top:70px;
+  gap:0;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.item{
+  margin: 4px 0;
+  font-size: 10px;
+}
+
+.navmenu.active{
+  left:0;
+  margin-top: -20px;
+}
+
+ul li:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.navmenu .item a{
+  color:#7a6eec;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.source>p{
+  font-size: 7px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.source a{
+  text-decoration: none;
+  color: #8c52ff;
+}
+
+.source a:hover{
+  background-color: #7a6eec;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 3px;
+}
+}
+/*
+.open .bar1{
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2{
+  opacity:0;
+}
+
+.open .bar3{
+  transform: rotate(-45deg) translate(-6px, 8px);
+}
+
+.open .mobile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile{
+  position: absolute;
+  top:50px;
+  width: 100%;
 }
 */
-@media screen and (min-width: 300px){
-.section_a{
-  background-image: url(https://cdn.pixabay.com/photo/2021/03/31/16/35/clouds-6139982_1280.png);
-  background-position: center;
-  background-attachment: fixed;
-}
 
 
 
-.section_c{
-  background-image: url("https://cdn.pixabay.com/photo/2021/03/31/16/35/clouds-6139980_1280.png");
-  background-position: center;
-  background-attachment: fixed;
-
-}
 
 
-footer{
-  background-image: url("https://cdn.pixabay.com/photo/2021/03/31/16/35/clouds-6139982_1280.png");
-  background-position: center;
-  background-attachment: fixed;
-}
-}
+

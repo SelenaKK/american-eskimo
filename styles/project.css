@@ -1,0 +1,67 @@
+.project_nav{
+        background-color: #7a6eec;
+        top: 0;
+        position: fixed;
+      }
+      
+.project_nav a{
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        margin: auto;
+        padding: 30px;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+
+.project_page{
+    background-color: #ffffff;
+    background-image: url("https://cdn.pixabay.com/photo/2021/04/04/23/14/background-6151744_1280.png");
+    background-position: center;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin:0;
+    overflow: hidden;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: space-between;
+}
+.project h2 a{
+   font-size: 40px;
+   text-transform: uppercase;
+   color: #7a6eec;
+   text-decoration: none;
+}
+
+.project h2 a:hover{
+   background-color:white;
+   border-radius: 15px;
+   padding:20px; 
+}
+
+
+
+
+
+@media screen and (max-width: 700px){
+    .project h2 a{
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #7a6eec;
+        text-decoration: none;
+     }
+     .project h2 a:hover{
+        background-color:white;
+        border-radius: 5px;
+        padding:2px; 
+}
+}
