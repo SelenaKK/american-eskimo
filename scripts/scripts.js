@@ -16,7 +16,7 @@ exploreBtn.addEventListener('click', (e)=>{
 
 
 
-/*star rating reference: https://www.youtube.com/watch?v=UCdaOBWOh2c*/
+/*star rating reference: https://www.youtube.com/watch?v=UCdaOBWOh2c
 
 function hideUnhide(id){
     const s1 = document.getElementById(id);
@@ -26,4 +26,52 @@ function hideUnhide(id){
         s1.style.display = "block";
     }
 }
+*/
 
+const socialButton = document.getElementById('social_part');
+const context = document.getElementById('social');
+
+socialButton.addEventListener('click', () =>{
+    context.classList.toggle('show');
+    if (context.style.display == "block"){
+        context.style.display = "none";
+    }else{
+        context.style.display = "block";
+    }
+})
+
+const physicalButton = document.getElementById('physical_part');
+const contextTwo = document.getElementById('physical');
+
+physicalButton.addEventListener('click', () =>{
+    contextTwo.classList.toggle('show');
+    if (contextTwo.style.display == "block"){
+        contextTwo.style.display = "none";
+    }else{
+        contextTwo.style.display = "block";
+    }
+})
+
+const personButton = document.getElementById('personality_part');
+const contextThree = document.getElementById('personality');
+
+personButton.addEventListener('click', () =>{
+    contextThree.classList.toggle('show');
+    if (contextThree.style.display == "block"){
+        contextThree.style.display = "none";
+    }else{
+        contextThree.style.display = "block";
+    }
+})
+
+const lifeButton = document.getElementById('life_part');
+const contextFour = document.getElementById('family');
+
+lifeButton.addEventListener('click', () =>{
+    contextFour.classList.toggle('show');
+    if (contextFour.style.display == "block"){
+        contextFour.style.display = "none";
+    }else{
+        contextFour.style.display = "block";
+    }
+})
