@@ -172,13 +172,13 @@
   }
 
   .btns.correct{
-    background-color: limegreen;
+    background-color: orange;
     color:#ffffff
   }
 
   .btns.wrong{
-    background-color: tomato;
-    color: #ffffff;
+    background-color: gray;
+    color: black;
   }
 
   #start-btn{
@@ -239,18 +239,18 @@
   color: #8c52ff;
  }
 
- .green{
+ .orange{
   color:#ffffff;
-  background-color: limegreen;
+  background-color: orange;
   padding: 2px 3px;
   border-radius: 10px;
  }
 
- .red{
+ .gray{
   color:#ffffff;
-  background-color: tomato;
+  background-color: gray;
   padding: 2px 3px;
-  border-radius: 10px;
+  border-radius: 15px;
  }
 
  @media screen and (max-width: 700px){
